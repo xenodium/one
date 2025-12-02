@@ -2,17 +2,24 @@
 
 Transform images into character art using text from your codebase.
 
+#+begin_src shell
+  one --with MyCode.swift me.png
+#+end_src
+
 * Installation
+
+** Using [[https://brew.sh/][Homebrew]]
+
+#+begin_src shell
+brew install --HEAD xenodium/one/one
+#+end_src
+
+** Building from source
 
 #+begin_src shell
 go build
 #+end_src
 
-* Usage
-
-#+begin_src shell
-  one --with MyCode.swift me.png
-#+end_src
 
 * Flags
 
