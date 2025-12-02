@@ -1,0 +1,46 @@
+* One
+
+Transform images into character art using text from your codebase.
+
+* Installation
+
+#+begin_src shell
+go build
+#+end_src
+
+* Usage
+
+#+begin_src shell
+  one --with MyCode.swift me.png
+#+end_src
+
+* Flags
+
+- ~--with~ :: File or directory containing text to use for characters
+- ~--as~ :: Output file path (if empty, prints to terminal)
+- ~--bg~ :: Background color as hex (e.g., 000000, FFFFFF, 00000000 for transparent)
+
+* Output Formats
+
+Detected automatically by file extension:
+
+- ~.png~ :: Image file with colored characters
+- ~.html~ :: HTML file with inline colored text
+- ~.txt~ or ~.ansi~ :: Text file with ANSI color codes
+- No extension :: Colored output to terminal
+
+* Examples
+
+#+begin_src shell
+  # Use entire directory as text source
+  one --with ./src me.png
+
+  # Save as HTML
+  one --with code.go --as art.html me.png
+
+  # Save as PNG
+  one --with myproject/ --as output.png photo.png
+
+  # Save as text (ANSI colors)
+  one --with code.py --as output.txt me.png
+#+end_src
