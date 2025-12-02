@@ -506,9 +506,15 @@ func (cs *charSource) loadFile(index int) error {
 
 	// Filter out control characters (newlines, tabs, etc.) but keep spaces
 	var filtered []rune
+	var lastChar rune
 	for _, r := range []rune(string(content)) {
 		if r == ' ' || (r >= 33 && r <= 126) || r > 126 {
+			// Skip consecutive spaces (yields a more complete image).
+			if r == ' ' && lastChar == ' ' {
+				continue
+			}
 			filtered = append(filtered, r)
+			lastChar = r
 		}
 	}
 
