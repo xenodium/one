@@ -1,4 +1,4 @@
-* One
+* One (be at one)
 
 Transform images into character art using text from your codebase.
 
