@@ -6,6 +6,8 @@ Transform images into character art using text from your codebase.
   one --with MyCode.swift me.png
 #+end_src
 
+#+HTML: <img src="https://github.com/xenodium/one/blob/main/one.gif?raw=true" width="300px" alt="Screencast converting image to source code art" />
+
 * Installation
 
 ** Using [[https://brew.sh/][Homebrew]]
